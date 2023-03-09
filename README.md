@@ -10,8 +10,8 @@ I've did all the requirements:
 
 Bonus:
 
-1. Styles is written in TailwindCss
-2. You can add favourite movies by clicking on heart icon
+1. Styles is written in TailwindCSS
+2. You can add favourite movies by clicking on heart icon, then remove them on '/favourites' page
 3. Redux/Redux Toolkit is included
 4. Some SEO optimizations is included
 
