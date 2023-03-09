@@ -1,3 +1,5 @@
+npm run dev
+
 I've did all the requirements:
 
 1. Typescript
