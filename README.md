@@ -27,3 +27,4 @@ Additional notes:
 4. Optional render depending on url endpoint (there's no input on '/favourites')
 5. Loading bar before separate item page is loaded
 6. Debounce function on input change to prevent too many requests (500ms)
+7. Custom 404 page to handle invalid reguest 
