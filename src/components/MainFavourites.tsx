@@ -10,7 +10,7 @@ const MainFavourites: React.FC = () => {
 
     return (
         <main >
-            {favourites.length ? <div className="wrapper mt-5 justify-items-center grid-cols-3 auto-rows-max grid gap-5  px-10">
+            {favourites.length ? <div className="wrapper my-5 justify-items-center  grid-cols-4 auto-rows-max grid gap-5  px-10">
                 {favourites.map((obj, index: number): React.ReactNode => (
                     <Card hasIcon={false} title={obj.title} poster={obj.poster} year={obj.year} key={index} imdbID={obj.imdbID} />
                 ))}
