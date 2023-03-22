@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import axios from 'axios'
 import Loader from '@/components/Loader'
 import { ICardPage } from '@/types/types'
-
+import Image from 'next/image'
 const CardPage: React.FC = () => {
 
   const router = useRouter();
@@ -16,17 +16,7 @@ const CardPage: React.FC = () => {
 
   const [isLoading, setIsLoading] = React.useState<Boolean>(true)
 
-  const [item, setItem] = React.useState<ICardPage>({
-    Poster: '',
-    Director: '',
-    Actors: '',
-    Plot: '',
-    imdbRating: '',
-    imdbVotes: '',
-    Type: '',
-    Title: '',
-    Year: '',
-  })
+  const [item, setItem] = React.useState<ICardPage | null>(null)
 
   const getMovie = async () => {
     const { data } = await axios.get(`http://www.omdbapi.com/?apikey=c83e38af&i=${route.query.imdbID}`)
@@ -41,7 +31,7 @@ const CardPage: React.FC = () => {
 
   return (
 
-    isLoading ? <Loader /> :
+    isLoading ? <Loader /> : item &&
       <>
         <div onClick={() => router.push('/')} className='mt-5 text-center font-bold transition-all hover:opacity-50 cursor-pointer'>
           ← Move Back
@@ -63,7 +53,7 @@ const CardPage: React.FC = () => {
             </div>
           </div>
           <div className='card__page-abs absolute -left-5 bottom-1/4'>
-            {item.Type === 'movie' ? '' : <div className="p-2 border-gray-500 border-2 rounded-md bg-white">This isn't a movie so why it's here?</div >}
+            {item.Type === 'movie' ? <span></span> : <div className="p-2 border-gray-500 border-2 rounded-md bg-white">This isn&apos;t a movie so why it&apos;s here?</div >}
           </div>
         </div>
       </>
