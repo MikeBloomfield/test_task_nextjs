@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '@/redux/store'
 import { setValue, setFetchValue } from '@/redux/inputSlice'
 import debounce from 'lodash.debounce'
+import { NextPage } from 'next'
 
-
-const MyInput: React.FC<Input> = ({ placeholder }) => {
+const MyInput: NextPage<Input> = ({ placeholder }) => {
 
     const dispatch = useDispatch()
     const value = useSelector((state: RootState) => state.inputSlice.value)

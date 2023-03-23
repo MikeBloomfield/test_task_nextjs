@@ -5,8 +5,10 @@ import { ImCancelCircle } from 'react-icons/im'
 import { useDispatch } from 'react-redux'
 import { setFavourites, removeFavourite } from '@/redux/favouriteSlice'
 import { useState } from 'react'
-import Image from 'next/image'
-const Card: React.FC<ICard> = ({ title, poster, year, imdbID, hasIcon }) => {
+import { NextPage } from 'next'
+
+
+const Card: NextPage<ICard> = ({ title, poster, year, imdbID, hasIcon }) => {
 
     const dispatch = useDispatch()
 

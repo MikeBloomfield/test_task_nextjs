@@ -2,8 +2,9 @@ import React from 'react'
 import Card from './Card'
 import { RootState } from '@/redux/store'
 import { useSelector } from 'react-redux'
+import { NextPage } from 'next'
 
-const MainFavourites: React.FC = () => {
+const MainFavourites: NextPage = () => {
 
     const favourites = useSelector((state: RootState) => state.favouriteSlice.items)
 

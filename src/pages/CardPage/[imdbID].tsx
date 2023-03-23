@@ -3,8 +3,8 @@ import { useRouter } from 'next/router'
 import axios from 'axios'
 import Loader from '@/components/Loader'
 import { ICardPage } from '@/types/types'
-import Image from 'next/image'
-const CardPage: React.FC = () => {
+import { NextPage } from 'next'
+const CardPage: NextPage = () => {
 
   const router = useRouter();
 

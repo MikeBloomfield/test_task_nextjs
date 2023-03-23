@@ -10,17 +10,8 @@ export interface ICard {
     hasIcon: boolean
 }
 
-export interface ICardPage {
-    Poster: string,
-    Director: string,
-    Actors: string,
-    Plot: string,
-    imdbRating: string,
-    imdbVotes: string,
-    Type: string,
-    Title: string,
-    Year: string,
-}
+export type ICardPage = Record<string, string>
+
 
 
 

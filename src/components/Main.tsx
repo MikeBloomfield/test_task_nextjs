@@ -3,7 +3,9 @@ import Card from './Card'
 import { AppDispatch, RootState } from '@/redux/store'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchMovies } from '@/redux/inputSlice'
-const Main: React.FC = () => {
+import { NextPage } from 'next'
+
+const Main: NextPage = () => {
 
     const dispatch = useDispatch<AppDispatch>()
 
