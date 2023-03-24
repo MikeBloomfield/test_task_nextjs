@@ -24,7 +24,7 @@ const MyInput: NextPage<Input> = ({ placeholder }) => {
     };
 
     return (
-        <input placeholder={placeholder} className='bg-gray-200 mt-2 w-1/3 border-2 px-2 border-black  block' type="text" value={value} onChange={onChangeInput} />
+        <input placeholder={placeholder} className='bg-gray-200 mt-2 w-1/5 border-2 px-2 border-black  block' type="text" value={value} onChange={onChangeInput} />
     )
 }
 
