@@ -12,3 +12,5 @@ export interface InputSlice {
 export interface IFavourite {
     items: ICard[]
   }
+
+
