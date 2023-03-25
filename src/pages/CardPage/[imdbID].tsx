@@ -4,22 +4,25 @@ import axios from 'axios'
 import Loader from '@/components/Loader'
 import { ICardPage } from '@/types/types'
 import { NextPage } from 'next'
-const CardPage: NextPage = () => {
+import { IStaticProps } from '@/redux/types'
+import { GetServerSideProps } from 'next'
+
+
+
+const CardPage: NextPage<IStaticProps> = ({ id }) => {
+
+  console.log(id)
 
   const router = useRouter();
 
 
-
-
-
-  const route = useRouter()
 
   const [isLoading, setIsLoading] = React.useState<Boolean>(true)
 
   const [item, setItem] = React.useState<ICardPage | null>(null)
 
   const getMovie = async () => {
-    const { data } = await axios.get(`http://www.omdbapi.com/?apikey=c83e38af&i=${route.query.imdbID}`)
+    const { data } = await axios.get(`http://www.omdbapi.com/?apikey=c83e38af&i=${id}`)
     setItem(data)
     setIsLoading(false)
   }
@@ -60,4 +63,19 @@ const CardPage: NextPage = () => {
   )
 }
 
+
+
 export default CardPage
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+
+  console.log(context.params)
+
+  const imdbID = context.params?.imdbID
+
+  return {
+    props: {
+      id: imdbID
+    }
+  };
+}

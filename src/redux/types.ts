@@ -8,6 +8,10 @@ export interface InputSlice {
     items: ICard[]
 }
 
+export interface IStaticProps {
+    id: string
+  }
+
 
 export interface IFavourite {
     items: ICard[]
