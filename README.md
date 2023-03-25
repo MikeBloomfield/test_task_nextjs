@@ -29,4 +29,4 @@ Additional notes:
 6. Debounce function on input change to prevent too many requests (500ms)
 7. Custom 404 page to handle invalid reguest
 8. Redux Persist is added to save state in LocalStorage
-
+9. Add server side props to take data on refresh page

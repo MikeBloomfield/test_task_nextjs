@@ -39,7 +39,7 @@ const Card: NextPage<ICard> = ({ title, poster, year, imdbID, hasIcon }) => {
     return (
         <div className='bg-black flex flex-col justify-between w-full h-full rounded-md  transition-all hover:-translate-y-3 hover:scale-105  relative'>
             <Link className='cursor-pointer flex-grow flex justify-center items-center' href={`/CardPage/${imdbID}`}>
-                <div className='w-full rounded-t-md  h-auto flex flex-col justify-center'>
+                <div className='bg-card-pic bg-center overflow-hidden bg-no-repeat w-full rounded-t-md  h-auto min-h-[300px] flex flex-col justify-center'>
                     <div >
                         <img placeholder='blur' className=' object-cover w-full' src={poster !== 'N/A' ? poster : 'https://www.prokerala.com/movies/assets/img/no-poster-available.webp'} alt="movie pic" />
                     </div>
