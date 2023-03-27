@@ -39,11 +39,11 @@ const CardPage: NextPage<IStaticProps> = ({ id }) => {
         <div onClick={() => router.push('/')} className='mt-5 text-center font-bold transition-all hover:opacity-50 cursor-pointer'>
           ← Move Back
         </div>
-        <div className='card__page relative m-auto max-w-[700px] mt-[100px] my-5 flex gap-10  justify-center items-start'>
+        <div className='tablet:flex-col tablet:items-center relative m-auto max-w-[700px] mt-[100px] my-5 flex gap-10  justify-center items-start'>
           <div>
             <img src={item.Poster} alt="poster pic" />
           </div>
-          <div className='card__page-right flex flex-col items-start gap-2 w-1/3'>
+          <div className='tablet:items-center tablet:w-full tablet:py-[0px] tablet:px-[15px] flex flex-col items-start gap-2 w-1/3'>
             <div className='flex gap-2'> <h2 className='text-left font-bold'>{item.Title}</h2> <span className='font-bold'>({item.Year})</span></div >
             <ul className='flex flex-col gap-2'>
               <li><b>Director:</b> {item.Director}</li>
@@ -55,8 +55,8 @@ const CardPage: NextPage<IStaticProps> = ({ id }) => {
               <div><b>Votes</b>: {item.imdbVotes}</div>
             </div>
           </div>
-          <div className='card__page-abs absolute -left-5 bottom-1/4'>
-            {item.Type === 'movie' ? <span></span> : <div className="p-2 border-gray-500 border-2 rounded-md bg-white">This isn&apos;t a movie so why it&apos;s here?</div >}
+          <div className='tablet:top-0 tablet:left-[50%] tablet:translate-x-[-50%]  absolute -left-5 bottom-1/4'>
+            {item.Type === 'movie' ? <span></span> : <div className="p-2 border-gray-500 tablet:text-center border-2 rounded-md bg-white">This isn&apos;t a movie so why it&apos;s here?</div >}
           </div>
         </div>
       </>

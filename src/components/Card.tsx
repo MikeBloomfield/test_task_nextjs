@@ -45,8 +45,8 @@ const Card: NextPage<ICard> = ({ title, poster, year, imdbID, hasIcon }) => {
                     </div>
                 </div>
             </Link>
-            <div className=' bg-black text-white rounded-md flex gap-1 justify-center flex-col items-center py-6'><h2 className='card-title px-2 text-center text-2xl mb-2'>{title}</h2><span className='card-desc text-2xl text-yellow-400'>({year})</span></div >
-            {hasIcon ? <div onClick={addToFavourite} className='cursor-pointer card__icon absolute top-3 right-3 p-2 bg-white rounded-md group  transition-all'>
+            <div className=' bg-black text-white rounded-md flex gap-1 justify-center flex-col items-center py-6'><h2 className='tablet:text-[18px] tablet:leading-[18px] px-2 text-center text-2xl mb-2'>{title}</h2><span className='tablet:text-[16px] tablet:leading-[16px] text-2xl text-yellow-400'>({year})</span></div >
+            {hasIcon ? <div onClick={addToFavourite} className='cursor-pointer  absolute top-3 right-3 p-2 bg-white rounded-md group  transition-all'>
                 <AiFillHeart size={24} className='card__icon-inner text-red-400  group-hover:scale-125 transition-all ' />
                 {visible && <div className='absolute -left-20 top-0 bg-white rounded-md p-2 '>Saved!</div>}
             </div> : <div onClick={removeFromFavourite} className='cursor-pointer card__icon absolute top-3 right-3 p-2 bg-white rounded-md group  transition-all'>

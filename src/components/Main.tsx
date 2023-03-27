@@ -26,7 +26,7 @@ const Main: NextPage = () => {
     return (
         <main >
             <div className='text-center my-5 font-bold'>{titleValue}</div>
-            {items ? <div className="grid-items wrapper justify-items-center grid-cols-4 auto-rows-max grid gap-5 mb-10  px-10">
+            {items ? <div className=" wrapper justify-items-center grid-cols-4  small:grid-cols-1 fablet:grid-cols-2 tablet:grid-cols-3  auto-rows-max grid gap-5 mb-10  px-10">
                 {items.map((obj: any): React.ReactNode => (
                     <Card title={obj.Title} poster={obj.Poster} year={obj.Year} key={obj.imdbID} imdbID={obj.imdbID} hasIcon={true} />
                 ))}
